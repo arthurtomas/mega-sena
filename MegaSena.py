@@ -1,11 +1,12 @@
 import random
 
+N_MAX = 4
 complete_bet = []
 count = 0
 
 
 def aposta():
-    for i in range(0, 4):
+    for i in range(0, N_MAX):
         bet = int(input(f"Digite o {i+1}° número da sua aposta: "))
         complete_bet.append(bet)
     complete_bet.sort()
@@ -13,8 +14,8 @@ def aposta():
 
 
 def resultado():
-    result = []
-    result = random.sample(range(1, 61), 4)
+    # result = []
+    result = random.sample(range(1, 61), N_MAX)
     result.sort()
     return result
 
